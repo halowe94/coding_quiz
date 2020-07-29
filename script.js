@@ -7,6 +7,9 @@
 
 let quizDiv = document.querySelector("#quiz");
 let submitButton = document.querySelector("#submit");
+    submitButton.onclick = function() {
+        console.log(clicked);
+    }
 let resultsDiv = documetn.querySelector("#results");
 
 function quiz() {
@@ -17,6 +20,9 @@ function quiz() {
         (currentQuestion, questionNumber) => {
             //ie A-D
             let possibleAnswers = [];
+
+        //'for loop' utilized for answers
+        for() 
         }
     )
     ]
@@ -32,6 +38,7 @@ submitButton.addEventListener("click", resultsDiv);
 //Quiz Questions Array
 let quizQuestions = [
     //Question 1
+    
     { question:"What does DOM stand for?",
     answers: {
         A: "Desktop Object Model",
@@ -43,6 +50,7 @@ let quizQuestions = [
     },
 
     //Question 2
+
     { question: "i++ is ______",
     answers: {
         A: "the increment value of variable by one.",
@@ -77,3 +85,33 @@ let quizQuestions = [
     //End Questions
 ]
 //End Questions Array
+
+let button1 = document.querySelector("#button-1");
+    button1 = quizQuestions.answers.A("");
+
+let button2 = document.querySelector("#button-2");
+    button2 = quizQuestions.answers.B("");
+let button3 = document.querySelector("#button-3");
+    button3 = quizQuestions.answers.C("");
+let button4 = document.querySelector("#button-4");
+    button4 = quizQuestions.answers.D("");
+
+    console.log(button3);
+
+let questionsVar = document.querySelector("#questions");
+let questionsVar.textContent = quizQuestions.question("");
+
+let timerFunction = timerApp.setInterval(function(event) {
+    i = 0; i < 60; i--;
+})
+let timerApp = document.querySelector("#timer");
+    timerApp = Math.floor((timeleft % (1000 * 60)) / 1000);
+    console.log(timerApp);
+
+let clickButton = document.querySelector(".btn");
+
+    clickButton.addEventListener = ("click", function(event) {
+        console.log("Just Clicked");
+});
+
+console.log(clickButton);
