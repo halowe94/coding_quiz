@@ -8,9 +8,10 @@
 let quizDiv = document.querySelector("#quiz");
 let submitButton = document.querySelector("#submit");
     submitButton.onclick = function() {
+        
         console.log(clicked);
     }
-let resultsDiv = documetn.querySelector("#results");
+let resultsDiv = document.querySelector("#results");
 
 function quiz() {
     let output = [
@@ -22,11 +23,11 @@ function quiz() {
             let possibleAnswers = [];
 
         //'for loop' utilized for answers
-        for() 
-        }
-    )
-    ]
-}
+       // for() 
+       // }
+        })]
+
+
 function results () {}
 
 //start quiz immediately
@@ -99,7 +100,7 @@ let button4 = document.querySelector("#button-4");
     console.log(button3);
 
 let questionsVar = document.querySelector("#questions");
-let questionsVar.textContent = quizQuestions.question("");
+ questionsVar.textContent = quizQuestions.question("");
 
 let timerFunction = timerApp.setInterval(function(event) {
     i = 0; i < 60; i--;
@@ -115,3 +116,5 @@ let clickButton = document.querySelector(".btn");
 });
 
 console.log(clickButton);
+
+};
