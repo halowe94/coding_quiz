@@ -1,6 +1,6 @@
 //Create var to grab buttons
 let buttons = document.getElementsByClassName("btn");
-
+var secondsLeft = 60;
 //add on event listener to buttons
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function clickButton(){      
@@ -16,22 +16,17 @@ function timer() {
     //set interval function
     let countdown = document.getElementById("timer");
     let timerInterval = setInterval(
-    function() {
-    var secondsLeft = 60;
-    secondsLeft--;
-    countdown.textContent = secondsLeft;
+        function() {
+            countdown.textContent = secondsLeft;
+            secondsLeft--;
 
-    if(secondsLeft === 0) {
-        clearInterval(timerInterval);
-        sendMessage("The Quiz is over");
-    };
-
-    }
-    , 1000);
+            if(secondsLeft === 0) {
+                clearInterval(timerInterval);
+                //sendMessage("The Quiz is over"); this line will throw an error because we don't have sendmessage defined
+            };
+    }, 1000);
     //End setInterval
 }
-
-
 
 //create var for start quiz button
 function quizModal() {
@@ -140,3 +135,17 @@ let aButton = document.getElementById("button-1-text");
 //high score is stored in localStorage.setItem
 
 }};
+
+function closeModal() {
+    let closeButton = document.getElementById('modal-close')
+    closeButton.click();
+}
+
+
+let startButton = document.getElementById("startButton")
+startButton.addEventListener('click', () => {
+    closeModal();
+    timer();
+})
+
+
