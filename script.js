@@ -1,42 +1,57 @@
-//list of questions
-//What does DOM stand for?
-//what is missing form this function?
-//How would you log x in the console?
-//API stands for?
-//Bonus Q
+//Create var to grab buttons
+let buttons = document.getElementsByClassName("btn");
 
-let quizDiv = document.querySelector("#quiz");
-let submitButton = document.querySelector("#submit");
-    submitButton.onclick = function() {
-        
-        console.log(clicked);
+//add on event listener to buttons
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function clickButton(){      
+    //check for event in console log
+    console.log("COngrats!!!!!")
+});
+}
+//End for loop
+
+
+function timer() {
+
+    //set interval function
+    let countdown = document.getElementById("timer");
+    let timerInterval = setInterval(
+    function() {
+    var secondsLeft = 60;
+    secondsLeft--;
+    countdown.textContent = secondsLeft;
+
+    if(secondsLeft === 0) {
+        clearInterval(timerInterval);
+        sendMessage("The Quiz is over");
+    };
+
     }
-let resultsDiv = document.querySelector("#results");
-
-function quiz() {
-    let output = [
-    //for each loop for questions
-    quizQuestions.forEach(
-        //How does this part work?
-        (currentQuestion, questionNumber) => {
-            //ie A-D
-            let possibleAnswers = [];
-
-        //'for loop' utilized for answers
-       // for() 
-       // }
-        })]
+    , 1000);
+    //End setInterval
+}
 
 
-function results () {}
 
-//start quiz immediately
-quiz()
-
-//Event Listener
-submitButton.addEventListener("click", resultsDiv);
-
-//Quiz Questions Array
+//create var for start quiz button
+function quizModal() {
+let startQuiz = document.getElementById("startButton")
+        //create function for start quiz button to trigger timer
+       for (var j = 0; j < startQuiz.length; i++) {
+           startQuiz.addEventListener("click", function beginQuiz(){
+            
+            if(startQuiz === true) {
+                let closeModal = startQuiz.addEventListener("keyup", function(){
+                let hide = document.getElementById(exampleModal).hide;
+                });
+            
+        }
+    },
+           )};        
+//create function for start button
+//if start is clicked, open first question, and start timer
+//create question array
+let quizFunc = function questionArray(){
 let quizQuestions = [
     //Question 1
     
@@ -86,35 +101,42 @@ let quizQuestions = [
     //End Questions
 ]
 //End Questions Array
+//grab first property in question array
+let aButton = document.getElementById("button-1-text");
+    aButton.textContent = quizQuestions[0].answers[0];
+//append first question to question div
 
-let button1 = document.querySelector("#button-1");
-    button1 = quizQuestions.answers.A("");
+//append [0]A to #button-1
+//append [0]B to #button-2
+//append [0]C to #button-3
+//append [0]D to #button-4
 
-let button2 = document.querySelector("#button-2");
-    button2 = quizQuestions.answers.B("");
-let button3 = document.querySelector("#button-3");
-    button3 = quizQuestions.answers.C("");
-let button4 = document.querySelector("#button-4");
-    button4 = quizQuestions.answers.D("");
+//button click triggers correct or wrong 
+//next question click brings up next index in array
 
-    console.log(button3);
+//append [1]A to #button-1
+//append [1]B to #button-2
+//append [1]C to #button-3
+//append [1]D to #button-4
 
-let questionsVar = document.querySelector("#questions");
- questionsVar.textContent = quizQuestions.question("");
+//button click triggers correct or wrong 
+//next question click brings up next index in array
 
-let timerFunction = timerApp.setInterval(function(event) {
-    i = 0; i < 60; i--;
-})
-let timerApp = document.querySelector("#timer");
-    timerApp = Math.floor((timeleft % (1000 * 60)) / 1000);
-    console.log(timerApp);
+//append [2]A to #button-1
+//append [2]B to #button-2
+//append [2]C to #button-3
+//append [2]D to #button-4
 
-let clickButton = document.querySelector(".btn");
+//button click triggers correct or wrong 
+//next question click brings up next index in array
 
-    clickButton.addEventListener = ("click", function(event) {
-        console.log("Just Clicked");
-});
+//append [3]A to #button-1
+//append [3]B to #button-2
+//append [3]C to #button-3
+//append [3]D to #button-4
 
-console.log(clickButton);
+//button click triggers correct or wrong 
+//next question click brings up high score prompt
+//high score is stored in localStorage.setItem
 
-};
+}};
