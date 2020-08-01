@@ -28,28 +28,14 @@ function timer() {
     //End setInterval
 }
 
-//create var for start quiz button
-function quizModal() {
-let startQuiz = document.getElementById("startButton")
-        //create function for start quiz button to trigger timer
-       for (var j = 0; j < startQuiz.length; i++) {
-           startQuiz.addEventListener("click", function beginQuiz(){
-            
-            if(startQuiz === true) {
-                let closeModal = startQuiz.addEventListener("keyup", function(){
-                let hide = document.getElementById(exampleModal).hide;
-                });
-            
-        }
-    },
-           )};        
-//create function for start button
-//if start is clicked, open first question, and start timer
+
+
+
+
 //create question array
 let quizFunc = function questionArray(){
 let quizQuestions = [
     //Question 1
-    
     { question:"What does DOM stand for?",
     answers: {
         A: "Desktop Object Model",
@@ -57,6 +43,7 @@ let quizQuestions = [
         C: "Document Object Model",
         D: "Document Order Means"
     },
+
     correct: "C Document Object Model" 
     },
 
@@ -134,18 +121,28 @@ let aButton = document.getElementById("button-1-text");
 //next question click brings up high score prompt
 //high score is stored in localStorage.setItem
 
-}};
+};
 
 function closeModal() {
     let closeButton = document.getElementById('modal-close')
     closeButton.click();
 }
 
-
+//create var for start quiz button
 let startButton = document.getElementById("startButton")
+//create function for start button
 startButton.addEventListener('click', () => {
+//if start is clicked, close modal open first question, and start timer
     closeModal();
     timer();
-})
+    openWithStart();
+});
+
+
+    // let onloadOBj = document.getElementById(quiz);
+
+    // onloadOBj.addEventListener("load", () => {
+    //     onloadOBj.style.display = "none";
+    // });
 
 
