@@ -135,14 +135,14 @@ startButton.addEventListener('click', () => {
 //if start is clicked, close modal open first question, and start timer
     closeModal();
     timer();
-    openWithStart();
+    onloadOBj.style.display = "block";
 });
 
 
-    // let onloadOBj = document.getElementById(quiz);
+    let onloadOBj = document.getElementById("quiz");
 
-    // onloadOBj.addEventListener("load", () => {
-    //     onloadOBj.style.display = "none";
-    // });
+    //onloadOBj.addEventListener("load", () => {
+        onloadOBj.style.display = "none";
+    //});
 
 
